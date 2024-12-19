@@ -8,6 +8,36 @@ body {
   background-color: #F5EFE7;
 }
 
+figure {
+  margin: 0;
+  border: 5px solid #D8C4B6;
+  background-color: #D8C4B6;
+  border-radius: 10px;
+}
+
+figure figcaption {
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 0.7rem;
+  background-color: #D8C4B6;
+  color: #213555;
+}
+
+.image-background {
+  height: 300px;
+  width: 400px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.image-background img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
 .header {
   background-color: #3E5879;
   color: #E5E7EB;
@@ -69,4 +99,21 @@ body {
 
 .section .entry p {
   max-width: 30rem;
+}
+
+.multi-image-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.multi-image-section p {
+  margin-top: 2rem;
+  width: 50rem;
+}
+
+.multi-image-section .images {
+  display: flex;
+  gap: 5rem;
+  align-items: start;
 }
