@@ -15,7 +15,7 @@
   <body>
     <div class="header">
       <h1>
-        Guided Learning E-Portfolio
+        Virtual Reality Game Development
       </h1>
       <ul>
         <li><a href="../index.html">Introduction</a></li>
@@ -103,11 +103,6 @@
         <div class="section">
           <h2>Virtual Reality Sickness</h2>
           <div class="entry">
-            <figure>
-              <div class="image-background">
-                <img>
-              </div>
-            </figure>
             <p>
               <strong>Virtual Reality Sickness</strong> is a phenomenon that occurs when
               your brain recieves conflicting signals about your body's movement
@@ -130,6 +125,11 @@
               as mentioned above, and <strong>Snap Turning</strong> which will be in the next
               section.
             </p>
+            <figure>
+              <div class="image-background">
+                <img>
+              </div>
+            </figure>
           </div>
           <div class="multi-image-section">
             <h2>Turning</h2>
@@ -167,6 +167,115 @@
               <strong>Teleporation Movement</strong> exists, which is to combat
               <strong>Virtual Reality Sickness</strong>, as mentioned previously.
             </p>
+          </div>
+          <div class="multi-image-section">
+            <h2>Grabbable Objects</h2>
+            <div class="images">
+              <figure>
+                <div class="image-background">
+                  <img>
+                </div>
+                <figcaption>Fig 3a. Racket hitting a ball</caption>
+              </figure>
+              <figure>
+                <div class="image-background">
+                  <img>
+                </div>
+                <figcaption>Fig 3b. Turning the cover page of a book</figcaption>
+              </figure>
+            </div>
+            <p>
+              In the virtual world, interactions with objects can be as simple as reaching out and pressing a button
+              to grab it. Hence, grabbing objects can be very intuitive to people new to Virtual Reality.<br/><br/>
+
+              Grabbing objects can also lead to more complex interactions as the objects themselves can have their own
+              behaviour. For example, in <em>Fig 3a.</em> The user can hit and bounce the ball while holding the racket. 
+              And in <em>Fig 3b.</em> The cover page of the book can be flipped while grabbing the book. Lastly, 
+              while not shown in the clips, objects can also be thrown when let go at certain velocities.<br/><br/>
+
+              <strong>Distance Grabbing</strong> is another way to grab objects. Instead of bringing their hand close to the
+              object to grab it, users can point at a far away object using a ray cast from their hand to grab the object. This can
+              be an accessibility feature for users who have a small play space which makes it hard for them to reach out for an object.
+            </p>
+          </div>
+          <div class="multi-image-section">
+            <h2>Sockets</h2>
+            <div class="images">
+              <figure>
+                <div class="image-background">
+                  <img>
+                </div>
+                <figcaption>Fig 4a. Socket used to hold a painting</caption>
+              </figure>
+              <figure>
+                <div class="image-background">
+                  <img>
+                </div>
+                <figcaption>Fig 4b. Player using a socket on the head to wear a hat</figcaption>
+              </figure>
+            </div>
+            <p>
+              <strong>Sockets</strong> are targets for other interactables (such as grabble objects) to snap onto. Sockets are an
+              incredibly useful and powerful tool as they be used to define a specific area an object can be placed.<br/><br/>
+
+              For example, in <em>Fig 4a.</em> The painting can be removed and placed onto the wall. Think kind of interaction can
+              be useful for puzzles where the object needs to be slot at a specific area, or a jigsaw puzzle 
+              with a grid of sockets.<br/><br/>
+
+              Sockets can also be placed on the player model itself, creating opportunities for customising the user avatar. For example
+              in <em>Fig 4b.</em> The user picks up the hat model from the hook and places it on their head, which is a socket, allowing
+              them to wear the hat. This can also allow other interesting features, such as holstering a gun on the player, or having a
+              removable backpack that acts as the player inventory.
+            </p>
+          </div>
+          <div class="multi-image-section">
+            <h2>Object Interactions with Events</h2>
+            <div class="images">
+              <figure>
+                <div class="image-background">
+                  <img>
+                </div>
+                <figcaption>Fig 5a. Remote turns on the television</caption>
+              </figure>
+              <figure>
+                <div class="image-background">
+                  <img>
+                </div>
+                <figcaption>Fig 5b. Watering can pouring water when tilted</figcaption>
+              </figure>
+            </div>
+            <p>
+              More complex behaviours can be created with interactable objects using <strong>events</strong>.<br/><br/>
+
+              <strong>Button presses</strong> can cause a certain event to trigger. For example in <em>Fig 5a.</em> Pressing a button on 
+              the controller while holding the remote toggles the video playing on the television to be on or off. Other examples are 
+              shooting a gun on a button press, or a controlling a drone with a remote.<br/><br/>
+
+              Events can also be triggered due to the transform of an object. For example in <em>Fig 5b.</em> Water is poured of the 
+              watering can when it is held beyond a certain angle. Other examples include inflicting damage when a sword is swung at a
+              beyond a specific velocity, or lighting a candle when it is brought near a flame.
+            </p>
+          </div>
+          <div class="section">
+            <h2>User Interface</h2>
+            <div class="entry">
+              <figure>
+                <div class="image-background">
+                  <img>
+                </div>
+                <figcaption>Fig 6.</caption>
+              </figure>
+              <p>
+                User interfaces in virtual reality are in the <strong>World space</strong> as opposed to being overlayed onto the camera.
+                This is because the user cannot interact with the screen itself as it is essentialy the 'eyes' of the user. Instead, they
+                can physically interact with an graphical interface that is placed directly in the world.<br/><br/>
+  
+                For example in <em>Fig 6.</em> the user is interacting with buttons by pointing with a ray casted from the hand and
+                pressing a button on their controller. However while in the video the user interface is simple and two-dimensional, it
+                is possible and more interesting to create a user interface using three-dimensional interface objects such as keypads
+                or pressable buttons.<br/><br/>
+              </p>
+            </div>
           </div>
       </div>
     </div>
