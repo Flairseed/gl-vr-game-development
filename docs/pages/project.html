@@ -29,7 +29,173 @@
     <div class="content">
       <h1>PROJECT</h1>
       <div class="section">
+        <h2>Harware and Software</h2>
+        <div class="entry">
+          <figure>
+            <div class="image-background">
+              <img>
+            </div>
+          </figure>
+          <p>
+            The head mounted display I used was the <strong>Meta Quest 3</strong>. It is the latest headset of
+            the Meta Quest line.<br/><br/>
 
+            The development hardware is my laptop, a <strong>Lenovo Legion 5</strong>. It is fitted with an Nvidia
+            RTX 3050Ti Laptop GPU, and an AMD Ryzen 7 6800H CPU.<br/><br/>
+
+            The development environment is the <strong>Unity Game Engine</strong> with the XR Interaction Toolkit.
+            The Unity version I used is 6000.0.30f1 and I used the VR Template as my starting point.<br/><br/>
+
+            Some 3D modelling and rigging was done using <strong>Blender</strong>.<br/><br/>
+          </p>
+        </div>
+        <div class="multi-image-section">
+          <h2>Locomotion</h2>
+          <div class="images">
+            <figure>
+              <div class="image-background">
+                <img>
+              </div>
+              <figcaption>Fig 1a. Zero-gravity grab movement</caption>
+            </figure>
+            <figure>
+              <div class="image-background">
+                <img>
+              </div>
+              <figcaption>Fig 1b. Hand thrusters</figcaption>
+            </figure>
+          </div>
+          <p>
+            The movement system I used was not any of the default ones provided by the toolkit. Instead, I programmed
+            my own custom movement script. The mechanics are highly inspired by
+            <a href="https://www.meta.com/experiences/pcvr/lone-echo/1368187813209608/">Lone Echo</a>, a game that
+            takes place in space. The player grabs walls or obstacles to drag themselves in a <strong>zero-gravity</strong> enviroment
+            as seen from <em>Fig 1a.</em> I also implemented snap-turning for accessibility.<br/><br/>
+
+            However, there may be cases where a player gets stuck at a low velocity with no walls or objects nearby,
+            hence rendering them stuck until they hit the next obstacle, which can create a frustrating game experience.
+            To fix this, I created a script for <strong>hand thruster movement</strong> as seen from <em>Fig 1b.</em> The player can press
+            the primary button of either controller to gain acceleration in the direction of the controller. If both hands are
+            trying to add thrust, then the accelerations are added together. The player is also clamped with a maximum velocity.
+            Furthermore if the user wants to slow down, the thumb stick of either controller can be pressed for a deceleration
+            on the move direction.
+          </p>
+        </div>
+        <h2>Cube Puzzle</h2>
+        <div class="entry">
+          <p>
+            The first puzzle I created for the escape room is a cube puzzle. The player must find cubes throughout
+            the room to and arrange the cubes in the frame in a way that connects the green lines together. I used a grid
+            of <strong>Socket</strong> Interactables inside the frame to allow the player to precisely place the cubes in a grid.
+            Completing it will give a <strong>key item</strong> important for escaping.
+          </p>
+          <figure>
+            <div class="image-background">
+              <img>
+            </div>
+          </figure>
+        </div>
+        <h2>Maze Puzzle</h2>
+        <div class="entry">
+          <figure>
+            <div class="image-background">
+              <img>
+            </div>
+          </figure>
+          <p>
+            The second puzzle I made was a ball maze puzzle. The player must tilt the puzzle to guide the ball out
+            of the maze to <strong>retrieve the ball</strong> which is important for escaping. However, since the enviroment is zero-gravity, 
+            there would be no gravity to push the ball out of the maze. Hence the player must enter a <strong>specific room</strong> 
+            that has special properties that attracts the ball to the ground.
+          </p>
+        </div>
+        <h2>Password Puzzle</h2>
+        <div class="entry">
+          <p>
+            The final puzzle I created in the room is a password puzzle. The player must find a secret password somewhere in the
+            room then input it to the keypad. When the password is correct, the player will obtain an <strong>important item</strong>
+            that is required to escape the room. The buttons are <strong>pokeable interactables</strong>.
+          </p>
+          <figure>
+            <div class="image-background">
+              <img>
+            </div>
+          </figure>
+        </div>
+        <h2>Escape Door</h2>
+        <div class="entry">
+          <figure>
+            <div class="image-background">
+              <img>
+            </div>
+          </figure>
+          <p>
+            Once the player gets all the key items, they have to place them in their correct sockets near the door. Then, the door
+            will open allowing the player to escape the room.
+          </p>
+        </div>
+        <div class="multi-image-section">
+          <h2>Custom Hand Model</h2>
+          <div class="images">
+            <figure>
+              <div class="image-background">
+                <img>
+              </div>
+              <figcaption>Fig 2a. <a href="">Youtube Tutorial</a> for importing model to Unity</caption>
+            </figure>
+            <figure>
+              <div class="image-background">
+                <img>
+              </div>
+              <figcaption>Fig 2b. Hand model in Blender doing the point pose</figcaption>
+            </figure>
+          </div>
+          <p>
+            After the initial prototype was done, I created my own hand model in <strong>Blender</strong>. Then, I followed the
+            tutorial in <em>Fig 2a.</em> to rig, import and animate the model in Unity.<br/><br/>
+
+            Furthermore, I ensured that the hand's <strong>Poke Interactors</strong> are only enabled when the hands are in their
+            poke pose as seen in <em>Fig 2b.</em>
+          </p>
+        </div>
+        <div class="multi-image-section">
+          <h2>Finishing Touches</h2>
+          <div class="images">
+            <figure>
+              <div class="image-background">
+                <img>
+              </div>
+              <figcaption>Fig 3a. Window showing stars outside</caption>
+            </figure>
+            <figure>
+              <div class="image-background">
+                <img>
+              </div>
+              <figcaption>Fig 3b. Handles for user to grab</figcaption>
+            </figure>
+          </div>
+          <p>
+            For the finishing touches, I set the background to be a solid black colour so that it looks more like space.
+            Then using the <strong>Particle System</strong>, I created starts. Finally, I created windows as seen from
+            <em>Fig 3a.</em> So the player can see the stars.
+
+            Since the room seem a little empty with a limited number of obstacles for the users to grab onto, I created
+            handles as seen from <em>Fig 3b.</em>
+          </p>
+        </div>
+        <h2>Final Product</h2>
+        <div class="entry">
+          <p>
+            To watch a video of the final product, you can <a href="">click this link</a>.<br/><br/>
+            
+            To download an APK that can be sideloaded onto a Meta Quest 3 Device, you can <a href="">click this link</a>.
+          </p>
+          <figure>
+            <div class="image-background">
+              <img>
+            </div>
+          </figure>
+        </div>
       </div>
     </div>
   </body>
